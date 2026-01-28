@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Award, Users, Target, Zap, Heart, Shield, ArrowRight, Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 export default function ValueSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -278,10 +280,10 @@ export default function ValueSection() {
                 </div>
 
                 {/* CTA Button */}
-                <button className="w-full group flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-white rounded-full font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl" style={{ color: '#2c3e50' }}>
+                <Link to='/about'><button className="w-full group flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-white rounded-full font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl" style={{ color: '#2c3e50' }}>
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                </button></Link>
 
                 {/* Navigation Dots */}
                 <div className="flex gap-2 mt-6 sm:mt-8 justify-center">

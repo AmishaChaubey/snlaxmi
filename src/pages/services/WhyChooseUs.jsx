@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Rocket, Users, Lock, Lightbulb, HeartHandshake } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const WhyChooseUs = () => {
   const features = [
@@ -161,8 +162,8 @@ const WhyChooseUs = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-          <button 
-            className="group relative inline-flex items-center gap-3 sm:gap-4 px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 lg:py-6 text-white font-black text-sm sm:text-base md:text-lg tracking-wider uppercase overflow-hidden transition-all duration-300 hover:gap-4 sm:hover:gap-5 md:hover:gap-6 w-full sm:w-auto justify-center"
+         <Link to='/contact'> <button 
+            className="group relative inline-flex items-center gap-3 sm:gap-4 px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 lg:py-6 text-white font-black text-sm sm:text-base md:text-lg tracking-wider uppercase overflow-hidden transition-all duration-300 hover:gap-4 sm:hover:gap-5 md:hover:gap-6 w-full sm:w-auto justify-center rounded-lg"
             style={{ 
               backgroundColor: '#2c3e50',
               fontFamily: '"playfair display", sans',
@@ -185,7 +186,7 @@ const WhyChooseUs = () => {
             
             {/* Animated background on hover */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#2c3e50] via-[#34495e] to-[#2c3e50] transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
-          </button>
+          </button></Link>
         </div>
       </div>
 

@@ -361,8 +361,8 @@ const values = [
               </p>
 
               <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 mb-4 sm:mb-5 lg:mb-6">
-                <Link to='/about'><button className="bg-gradient-to-br from-[#2c3e50] to-[#667788] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm hover:bg-white hover:text-[#2c3e50] transition-all duration-300 shadow-xl transform hover:scale-105 w-full sm:w-auto">
-                  Schedule Consultation
+                <Link to='/about'><button className="bg-gradient-to-br from-[#2c3e50] to-[#667788] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm hover:bg-white  transition-all duration-300 shadow-xl transform hover:scale-105 w-full sm:w-auto">
+                 Know More
                 </button></Link>
                <Link to='/contact'> <button className="bg-transparent border-2 border-white text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm hover:bg-white hover:text-[#2c3e50] transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
                   Contact Us

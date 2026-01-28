@@ -99,7 +99,7 @@ const Testimonials = () => {
             <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-[#2c3e50] flex-shrink-0" />
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black text-[#2c3e50] mb-3 sm:mb-4 md:mb-6 tracking-tight px-2 sm:px-4" 
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl 2xl:text-6xl  font-black text-[#2c3e50] mb-3 sm:mb-4 md:mb-6  px-2 sm:px-4" 
               style={{ fontFamily: "'Playfair Display', serif" }}>
             Loved by Clients
           </h2>

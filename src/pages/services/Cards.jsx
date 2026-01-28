@@ -50,46 +50,45 @@ export default function FlipCards() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
    
-
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-24">
-          <div className="inline-flex items-center justify-center mb-6">
+        {/* Header Section - Fully Responsive */}
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <div className="inline-flex items-center justify-center mb-4 sm:mb-6">
             <div className="relative">
               <div className="absolute inset-0 rounded-full blur-lg opacity-50" style={{ backgroundColor: '#2c3e50' }}></div>
-              <span className="relative inline-flex items-center px-6 py-3 rounded-full text-sm font-semibold text-white shadow-xl" style={{ backgroundColor: '#2c3e50', fontFamily: 'Lora, serif' }}>
+              <span className="relative inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white shadow-xl" style={{ backgroundColor: '#2c3e50', fontFamily: 'Lora, serif' }}>
                 Premium Financial Services
               </span>
             </div>
           </div>
           
-          <h1 className="text-8xl  font-bold mb-6 tracking-tight" style={{ color: '#2c3e50', fontFamily: 'Playfair Display, serif' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-4 sm:mb-6 tracking-tight px-4" style={{ color: '#2c3e50', fontFamily: 'Playfair Display, serif' }}>
             Products & Solutions
           </h1>
           
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent" style={{ borderColor: '#2c3e50', borderTopWidth: '1px' }}></div>
-            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
-            <div className="h-px w-16 bg-gradient-to-l from-transparent" style={{ borderColor: '#2c3e50', borderTopWidth: '1px' }}></div>
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent" style={{ borderColor: '#2c3e50', borderTopWidth: '1px' }}></div>
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
+            <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent" style={{ borderColor: '#2c3e50', borderTopWidth: '1px' }}></div>
           </div>
           
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: 'Lora, serif' }}>
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed px-4" style={{ fontFamily: 'Lora, serif' }}>
             Discover our comprehensive financial services crafted with precision for your success
           </p>
         </div>
 
-        {/* Cards Section */}
-        <div className="flex flex-col items-center gap-12">
-          {/* First row - 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl">
+        {/* Cards Section - Responsive Grid */}
+        <div className="flex flex-col items-center gap-8 sm:gap-10 md:gap-12">
+          {/* First row - Responsive: 1 card mobile, 2 tablet, 3 desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 w-full">
             {cardsData.slice(0, 3).map((card) => (
               <div
                 key={card.id}
-                className="h-[420px] perspective-1000"
+                className="h-[360px] sm:h-[400px] md:h-[420px] perspective-1000"
                 onClick={() => toggleFlip(card.id)}
                 onMouseEnter={() => setHoveredCard(card.id)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -102,7 +101,7 @@ export default function FlipCards() {
                 >
                   {/* Front of Card */}
                   <div
-                    className="absolute w-full h-full backface-hidden rounded-3xl shadow-xl shadow-gray-700 overflow-hidden group transition-shadow duration-300 hover:shadow-2xl"
+                    className="absolute w-full h-full backface-hidden rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl shadow-gray-600 sm:shadow-gray-700 overflow-hidden group transition-shadow duration-300 hover:shadow-2xl"
                     style={{
                       backfaceVisibility: 'hidden',
                       background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
@@ -115,38 +114,38 @@ export default function FlipCards() {
 
                     {/* Border glow */}
                     <div 
-                      className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      className="absolute inset-0 rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                       style={{
                         background: 'linear-gradient(135deg, rgba(44, 62, 80, 0.25), transparent)',
                       }}
                     ></div>
 
-                    <div className="relative flex flex-col items-center justify-center h-full p-10">
+                    <div className="relative flex flex-col items-center justify-center h-full p-6 sm:p-8 md:p-10">
                       {/* Decorative top line */}
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 rounded-full opacity-60" style={{ backgroundColor: '#2c3e50' }}></div>
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-0.5 sm:h-1 rounded-full opacity-60" style={{ backgroundColor: '#2c3e50' }}></div>
                       
-                      <h3 className="text-4xl font-bold mb-4 text-center tracking-tight" style={{ color: '#2c3e50', fontFamily: 'Playfair Display, serif' }}>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center tracking-tight px-2" style={{ color: '#2c3e50', fontFamily: 'Playfair Display, serif' }}>
                         {card.frontTitle}
                       </h3>
                       
-                      <div className="w-16 h-0.5 mb-6 rounded-full opacity-60" style={{ backgroundColor: '#2c3e50' }}></div>
+                      <div className="w-12 sm:w-16 h-0.5 mb-4 sm:mb-6 rounded-full opacity-60" style={{ backgroundColor: '#2c3e50' }}></div>
                       
-                      <p className="text-slate-700 text-center font-medium text-lg leading-relaxed px-4" style={{ fontFamily: 'Lora, serif' }}>
+                      <p className="text-slate-700 text-center font-medium text-base sm:text-lg leading-relaxed px-2 sm:px-4" style={{ fontFamily: 'Lora, serif' }}>
                         {card.frontDescription}
                       </p>
                       
                       {/* Click indicator */}
-                      <div className="absolute bottom-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider opacity-50 group-hover:opacity-100 transition-all duration-300" style={{ color: '#2c3e50', fontFamily: 'Lora, serif' }}>
+                      <div className="absolute bottom-6 sm:bottom-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider opacity-50 group-hover:opacity-100 transition-all duration-300" style={{ color: '#2c3e50', fontFamily: 'Lora, serif' }}>
                         <span>Explore</span>
                         <span className="inline-block transform transition-transform group-hover:translate-x-1">→</span>
                       </div>
 
-                      {/* Corner ornaments */}
-                      <div className="absolute top-8 right-8 w-12 h-12 opacity-20">
+                      {/* Corner ornaments - Hidden on small screens */}
+                      <div className="hidden sm:block absolute top-6 sm:top-8 right-6 sm:right-8 w-10 sm:w-12 h-10 sm:h-12 opacity-20">
                         <div className="absolute top-0 right-0 w-full h-0.5 rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
                         <div className="absolute top-0 right-0 w-0.5 h-full rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
                       </div>
-                      <div className="absolute bottom-8 left-8 w-12 h-12 opacity-20">
+                      <div className="hidden sm:block absolute bottom-6 sm:bottom-8 left-6 sm:left-8 w-10 sm:w-12 h-10 sm:h-12 opacity-20">
                         <div className="absolute bottom-0 left-0 w-full h-0.5 rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
                         <div className="absolute bottom-0 left-0 w-0.5 h-full rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
                       </div>
@@ -155,7 +154,7 @@ export default function FlipCards() {
 
                   {/* Back of Card */}
                   <div
-                    className="absolute w-full h-full backface-hidden rounded-3xl shadow-2xl overflow-hidden rotate-x-180"
+                    className="absolute w-full h-full backface-hidden rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl overflow-hidden rotate-x-180"
                     style={{
                       backfaceVisibility: 'hidden',
                       transform: 'rotateX(180deg)',
@@ -166,37 +165,37 @@ export default function FlipCards() {
                     <div className="absolute inset-0 opacity-10">
                       <div className="absolute inset-0" style={{
                         backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 1px)`,
-                        backgroundSize: '24px 24px'
+                        backgroundSize: '20px 20px sm:24px 24px'
                       }}></div>
                     </div>
 
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
 
-                    <div className="relative flex flex-col items-center justify-center h-full p-10">
+                    <div className="relative flex flex-col items-center justify-center h-full p-6 sm:p-8 md:p-10">
                       {/* Top accent line */}
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 rounded-full bg-white/40"></div>
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-0.5 sm:h-1 rounded-full bg-white/40"></div>
 
-                      <h3 className="text-4xl font-bold mb-5 text-white text-center drop-shadow-lg tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-5 text-white text-center drop-shadow-lg tracking-tight px-2" style={{ fontFamily: 'Playfair Display, serif' }}>
                         {card.backTitle}
                       </h3>
                       
-                      <div className="w-16 h-0.5 bg-white/60 mb-7 rounded-full shadow-lg"></div>
+                      <div className="w-12 sm:w-16 h-0.5 bg-white/60 mb-5 sm:mb-7 rounded-full shadow-lg"></div>
                       
-                      <p className="text-white/95 text-center leading-relaxed text-base drop-shadow-md max-w-sm px-2" style={{ fontFamily: 'Lora, serif' }}>
+                      <p className="text-white/95 text-center leading-relaxed text-sm sm:text-base drop-shadow-md max-w-sm px-2 sm:px-4" style={{ fontFamily: 'Lora, serif' }}>
                         {card.backContent}
                       </p>
                       
                       {/* Back indicator */}
-                      <div className="absolute bottom-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" style={{ fontFamily: 'Lora, serif' }}>
+                      <div className="absolute bottom-6 sm:bottom-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" style={{ fontFamily: 'Lora, serif' }}>
                         <span className="inline-block transform transition-transform hover:-translate-x-1">←</span>
                         <span>Return</span>
                       </div>
 
-                      {/* Decorative circles */}
-                      <div className="absolute top-8 right-8 w-16 h-16 border border-white/30 rounded-full"></div>
-                      <div className="absolute top-10 right-10 w-12 h-12 border border-white/20 rounded-full"></div>
-                      <div className="absolute bottom-8 left-8 w-20 h-20 border border-white/20 rounded-full"></div>
+                      {/* Decorative circles - Responsive sizes */}
+                      <div className="hidden sm:block absolute top-6 sm:top-8 right-6 sm:right-8 w-12 sm:w-16 h-12 sm:h-16 border border-white/30 rounded-full"></div>
+                      <div className="hidden sm:block absolute top-8 sm:top-10 right-8 sm:right-10 w-10 sm:w-12 h-10 sm:h-12 border border-white/20 rounded-full"></div>
+                      <div className="hidden sm:block absolute bottom-6 sm:bottom-8 left-6 sm:left-8 w-16 sm:w-20 h-16 sm:h-20 border border-white/20 rounded-full"></div>
                     </div>
                   </div>
                 </div>
@@ -204,12 +203,12 @@ export default function FlipCards() {
             ))}
           </div>
 
-          {/* Second row - 2 centered cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-4xl">
+          {/* Second row - Responsive: 1 card mobile, 2 cards tablet & desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10 w-full max-w-4xl">
             {cardsData.slice(3, 5).map((card) => (
               <div
                 key={card.id}
-                className="h-[420px] perspective-1000"
+                className="h-[360px] sm:h-[400px] md:h-[420px] perspective-1000"
                 onClick={() => toggleFlip(card.id)}
                 onMouseEnter={() => setHoveredCard(card.id)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -222,7 +221,7 @@ export default function FlipCards() {
                 >
                   {/* Front of Card */}
                   <div
-                    className="absolute w-full h-full backface-hidden rounded-3xl shadow-xl shadow-gray-700 overflow-hidden group transition-shadow duration-300 hover:shadow-2xl"
+                    className="absolute w-full h-full backface-hidden rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl shadow-gray-600 sm:shadow-gray-700 overflow-hidden group transition-shadow duration-300 hover:shadow-2xl"
                     style={{
                       backfaceVisibility: 'hidden',
                       background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
@@ -235,35 +234,35 @@ export default function FlipCards() {
 
                     {/* Border glow */}
                     <div 
-                      className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      className="absolute inset-0 rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                       style={{
                         background: 'linear-gradient(135deg, rgba(44, 62, 80, 0.25), transparent)',
                       }}
                     ></div>
 
-                    <div className="relative flex flex-col items-center justify-center h-full p-10">
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 rounded-full opacity-60" style={{ backgroundColor: '#2c3e50' }}></div>
+                    <div className="relative flex flex-col items-center justify-center h-full p-6 sm:p-8 md:p-10">
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-0.5 sm:h-1 rounded-full opacity-60" style={{ backgroundColor: '#2c3e50' }}></div>
                       
-                      <h3 className="text-4xl font-bold mb-4 text-center tracking-tight" style={{ color: '#2c3e50', fontFamily: 'Playfair Display, serif' }}>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center tracking-tight px-2" style={{ color: '#2c3e50', fontFamily: 'Playfair Display, serif' }}>
                         {card.frontTitle}
                       </h3>
                       
-                      <div className="w-16 h-0.5 mb-6 rounded-full opacity-60" style={{ backgroundColor: '#2c3e50' }}></div>
+                      <div className="w-12 sm:w-16 h-0.5 mb-4 sm:mb-6 rounded-full opacity-60" style={{ backgroundColor: '#2c3e50' }}></div>
                       
-                      <p className="text-slate-700 text-center font-medium text-lg leading-relaxed px-4" style={{ fontFamily: 'Lora, serif' }}>
+                      <p className="text-slate-700 text-center font-medium text-base sm:text-lg leading-relaxed px-2 sm:px-4" style={{ fontFamily: 'Lora, serif' }}>
                         {card.frontDescription}
                       </p>
                       
-                      <div className="absolute bottom-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider opacity-50 group-hover:opacity-100 transition-all duration-300" style={{ color: '#2c3e50', fontFamily: 'Lora, serif' }}>
+                      <div className="absolute bottom-6 sm:bottom-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider opacity-50 group-hover:opacity-100 transition-all duration-300" style={{ color: '#2c3e50', fontFamily: 'Lora, serif' }}>
                         <span>Explore</span>
                         <span className="inline-block transform transition-transform group-hover:translate-x-1">→</span>
                       </div>
 
-                      <div className="absolute top-8 right-8 w-12 h-12 opacity-20">
+                      <div className="hidden sm:block absolute top-6 sm:top-8 right-6 sm:right-8 w-10 sm:w-12 h-10 sm:h-12 opacity-20">
                         <div className="absolute top-0 right-0 w-full h-0.5 rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
                         <div className="absolute top-0 right-0 w-0.5 h-full rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
                       </div>
-                      <div className="absolute bottom-8 left-8 w-12 h-12 opacity-20">
+                      <div className="hidden sm:block absolute bottom-6 sm:bottom-8 left-6 sm:left-8 w-10 sm:w-12 h-10 sm:h-12 opacity-20">
                         <div className="absolute bottom-0 left-0 w-full h-0.5 rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
                         <div className="absolute bottom-0 left-0 w-0.5 h-full rounded-full" style={{ backgroundColor: '#2c3e50' }}></div>
                       </div>
@@ -272,7 +271,7 @@ export default function FlipCards() {
 
                   {/* Back of Card */}
                   <div
-                    className="absolute w-full h-full backface-hidden rounded-3xl shadow-2xl overflow-hidden rotate-x-180"
+                    className="absolute w-full h-full backface-hidden rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl overflow-hidden rotate-x-180"
                     style={{
                       backfaceVisibility: 'hidden',
                       transform: 'rotateX(180deg)',
@@ -282,31 +281,29 @@ export default function FlipCards() {
                     <div className="absolute inset-0 opacity-10">
                       <div className="absolute inset-0" style={{
                         backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 1px)`,
-                        backgroundSize: '24px 24px'
+                        backgroundSize: '20px 20px sm:24px 24px'
                       }}></div>
                     </div>
 
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
 
-                    <div className="relative flex flex-col items-center justify-center h-full p-10">
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 rounded-full bg-white/40"></div>
+                    <div className="relative flex flex-col items-center justify-center h-full p-6 sm:p-8 md:p-10">
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-0.5 sm:h-1 rounded-full bg-white/40"></div>
 
-                      <h3 className="text-4xl font-bold mb-5 text-white text-center drop-shadow-lg tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-5 text-white text-center drop-shadow-lg tracking-tight px-2" style={{ fontFamily: 'Playfair Display, serif' }}>
                         {card.backTitle}
                       </h3>
                       
-                      <div className="w-16 h-0.5 bg-white/60 mb-7 rounded-full shadow-lg"></div>
+                      <div className="w-12 sm:w-16 h-0.5 bg-white/60 mb-5 sm:mb-7 rounded-full shadow-lg"></div>
                       
-                      <p className="text-white/95 text-center leading-relaxed text-base drop-shadow-md max-w-sm px-2" style={{ fontFamily: 'Lora, serif' }}>
+                      <p className="text-white/95 text-center leading-relaxed text-sm sm:text-base drop-shadow-md max-w-sm px-2 sm:px-4" style={{ fontFamily: 'Lora, serif' }}>
                         {card.backContent}
                       </p>
                       
-                      <div className="absolute bottom-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" style={{ fontFamily: 'Lora, serif' }}>
+                      <div className="absolute bottom-6 sm:bottom-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" style={{ fontFamily: 'Lora, serif' }}>
                         <span className="inline-block transform transition-transform hover:-translate-x-1">←</span>
                         <span>Return</span>
                       </div>
-
-                
                     </div>
                   </div>
                 </div>
@@ -330,25 +327,14 @@ export default function FlipCards() {
         .transform-style-3d {
           transform-style: preserve-3d;
         }
-        @keyframes blob {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
+        
+        /* Prevent text selection on cards for better mobile experience */
+        .perspective-1000 {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          -webkit-tap-highlight-color: transparent;
         }
       `}</style>
     </div>

@@ -70,7 +70,7 @@ export default function FlipCards() {
             </div>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#2c3e50] font-bold mb-4 sm:mb-6 md:mb-8 tracking-tight px-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl 2xl:text-6xl  text-[#2c3e50] font-bold mb-4 sm:mb-6 md:mb-8 tracking-tight px-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             Our Services
           </h1>
           

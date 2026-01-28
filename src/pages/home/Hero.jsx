@@ -1,11 +1,30 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    // Preload the image
+    const img = new Image();
+    img.src = '/home.svg';
+    img.onload = () => setImageLoaded(true);
+  }, []);
+
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Static Background (No Parallax) */}
+      {/* Loading placeholder with blur effect */}
       <div
-        className="absolute inset-0 bg-center bg-cover bg-gradient-to-br from-[#61758a] to-[#34495e]"
+        className={`absolute inset-0 bg-gradient-to-br from-[#61758a] to-[#34495e] transition-opacity duration-500 ${
+          imageLoaded ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+
+      {/* Actual Background */}
+      <div
+        className={`absolute inset-0 bg-center bg-cover bg-gradient-to-br from-[#61758a] to-[#34495e] transition-opacity duration-500 ${
+          imageLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
         style={{ backgroundImage: "url('/home.svg')" }}
       />
 
@@ -23,7 +42,6 @@ const Hero = () => {
             Personalized financial planning to secure your future and achieve your goals.
           </p>
 
-          {/* Responsive Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
             <Link to="/contact" className="w-full sm:w-auto">
               <button className="
