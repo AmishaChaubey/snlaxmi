@@ -226,7 +226,7 @@ export default function ContactPage() {
                           className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 rounded-lg bg-slate-50 focus:bg-white focus:outline-none transition-colors font-sans text-sm sm:text-base ${
                             errors.phone ? 'border-red-500' : 'border-slate-200 focus:border-slate-900'
                           }`}
-                          placeholder="9876543210"
+                          placeholder="91XXXXXXXX"
                         />
                         {errors.phone && <p className="text-red-600 text-xs sm:text-sm mt-2 font-sans">{errors.phone}</p>}
                       </div>
