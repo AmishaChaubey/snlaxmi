@@ -166,7 +166,7 @@ const ProjectPage = () => {
             <div 
               key={project.id} 
               className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 hover:scale-[1.02] border border-gray-100"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `₹{index * 0.1}s` }}
             >
               {/* Professional border accent */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-gray-100 via-white to-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 p-0.5">
@@ -196,7 +196,7 @@ const ProjectPage = () => {
                 
                 {/* Status indicator */}
                 <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className={`px-3 py-1.5 rounded-full text-xs font-medium backdrop-blur-sm border ${
+                  <div className={`px-3 py-1.5 rounded-full text-xs font-medium backdrop-blur-sm border ₹{
                     project.status === 'Completed' 
                       ? 'bg-emerald-500/20 text-emerald-100 border-emerald-400/50' 
                       : 'bg-blue-500/20 text-blue-100 border-blue-400/50'
