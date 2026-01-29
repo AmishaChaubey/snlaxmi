@@ -267,7 +267,7 @@ const ProjectPage = () => {
                     </div>
                     <div>
                       <p className="font-medium text-gray-700 text-base">Email</p>
-                      <p className="text-gray-900 text-md font-semibold">SNLAXMINARAYAN16@GMAIL.COM</p>
+                      <p className="text-gray-900 text-md font-semibold">snlaxminarayan16@gmail.com</p>
                     </div>
                   </div>
                   

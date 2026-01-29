@@ -377,7 +377,7 @@ const values = [
                 <div className="flex items-center gap-2 justify-center sm:justify-start">
                   <span className="text-base sm:text-lg">✉️</span>
                   <span className="font-medium break-all sm:break-words lg:break-normal text-center sm:text-left">
-                    SNLAXMINARAYAN16@GMAIL.COM
+                    snlaxminarayan16@gmail.com
                   </span>
                 </div>
               </div>

@@ -7,7 +7,7 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Sahan Jay",
       role: "Business Owner",
       company: "TechStart Inc.",
       image: "SJ",
@@ -17,7 +17,7 @@ const Testimonials = () => {
       year: "2024"
     },
     {
-      name: "Michael Chen",
+      name: "Manish Chaubey",
       role: "Freelancer",
       company: "Creative Studio",
       image: "MC",
@@ -27,7 +27,7 @@ const Testimonials = () => {
       year: "2024"
     },
     {
-      name: "Emily Rodriguez",
+      name: "Emily Rathi",
       role: "Real Estate Agent",
       company: "Prime Properties",
       image: "ER",
@@ -37,7 +37,7 @@ const Testimonials = () => {
       year: "2023"
     },
     {
-      name: "David Patel",
+      name: "Danish Patel",
       role: "Startup Founder",
       company: "InnovateCo",
       image: "DP",
