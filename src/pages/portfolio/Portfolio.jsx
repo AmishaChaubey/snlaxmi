@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, ExternalLink, FileText, Calendar, Users, Award, DollarSign, Calculator, Shield, TrendingUp } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, FileText, Calendar, Users, Award, DollarSign, Calculator, Shield, TrendingUp, IndianRupeeIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
@@ -166,7 +166,7 @@ const ProjectPage = () => {
             <div 
               key={project.id} 
               className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 hover:scale-[1.02] border border-gray-100"
-              style={{ animationDelay: `₹{index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Professional border accent */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-gray-100 via-white to-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 p-0.5">
@@ -227,7 +227,7 @@ const ProjectPage = () => {
                 {/* Project Stats */}
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
                   <div className="flex items-center text-xs text-gray-500">
-                    <DollarSign size={14} className="mr-1" />
+                    <IndianRupeeIcon size={14} className="mr-1" />
                     Tax Savings
                   </div>
                   <div className="flex items-center text-xs text-gray-500 justify-end">
