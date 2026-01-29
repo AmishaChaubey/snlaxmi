@@ -419,7 +419,7 @@ const Footer = () => {
                           href="mailto:snlaxminarayan16@gmail.com" 
                           className="footer-link text-sm break-all sm:break-words"
                         >
-                          SNLAXMINARAYAN16@GMAIL.COM
+                          snlaxminarayan16@gmail.com
                         </a>
                       </li>
                       <li className="contact-item justify-center sm:justify-start">

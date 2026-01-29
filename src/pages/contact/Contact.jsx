@@ -134,7 +134,7 @@ export default function ContactPage() {
                   { 
                     icon: Mail, 
                     title: 'Email', 
-                    detail1: 'SNLAXMINARAYAN16@GMAIL.COM', 
+                    detail1:'snlaxminarayan16@gmail.com', 
                   },
                   { 
                     icon: MapPin, 
@@ -411,7 +411,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-slate-900 mb-1 text-xs sm:text-sm tracking-wide uppercase">Quick Contact</h3>
                     <p className="text-slate-600 leading-relaxed text-sm sm:text-base break-words">
                       +91 9015382370<br />
-                      SNLAXMINARAYAN16@GMAIL.COM
+                      snlaxminarayan16@gmail.com
                     </p>
                   </div>
                 </div>
